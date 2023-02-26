@@ -1,4 +1,4 @@
-# Komande korištene za kompleitanje TASK-2
+# Komande korištene za kompleitranje TASK-2
 
 ## Kreiranje novog brancha
 
@@ -19,7 +19,7 @@ touch bash-notes.md
 
 ## Level 0
 
-###### Komande korištene za prolazak level 0:
+###### Komande korištene za prolazak levela 0:
 
 `$ ssh bandit0@bandit.labs.overthewire.org -p 2220` - ovu komandu koristimo da bi se konektovali na server **_bandit.labs.ovethewire.org_** sa imenom usera **_bandit0_** na portu **_2220_**, **_-p_** specificira broj porta
 
@@ -37,7 +37,7 @@ $ exit - za izlazak sa servera
 
 ## Level 1
 
-###### Komande korištene za prolazaklevel 1:
+###### Komande korištene za prolazak levela 1:
 
 Nakon konektovanja na server komande koje su korištene za prolazak levela su:
 
@@ -50,7 +50,7 @@ $ cat ./- - komanda korištena kako bi pročitali fajl naziva "-"
 
 ## Level 2
 
-###### Komande korištene za prolazak level 2:
+###### Komande korištene za prolazak levela 2:
 
 ```
 $ ssh bandit2@bandit.labs.overthewire.org -p 2220
@@ -61,7 +61,7 @@ $ cat "spaces in this filename" - čitanje iz fajla "spaces in this filename"
 
 ## Level 3
 
-###### Komande korištene za prolazak level 3:
+###### Komande korištene za prolazak levela 3:
 
 ```
 $ ssh bandit3@bandit.labs.overthewire.org -p 2220
@@ -72,7 +72,7 @@ $ cat .hidden - citanje iz fajla .hidden
 
 ## Level 4
 
-###### Komande korištene za prolazak level 4:
+###### Komande korištene za prolazak levela 4:
 
 ```
 $ ssh bandit4@bandit.labs.overthewire.org -p 2220
@@ -84,7 +84,7 @@ $ cat ./-file07 - citanje iz fajla -file07
 
 ## Level 5
 
-###### Komande korištene za prolazak level 5:
+###### Komande korištene za prolazak levela 5:
 
 ```
 $ ssh bandit5@bandit.labs.overthewire.org -p 2220
@@ -97,7 +97,7 @@ $ cat .file2 - citanje iz fajla .file2
 
 ## Level 6
 
-###### Komande korištene za prolazak level 6:
+###### Komande korištene za prolazak levela 6:
 
 ```
 $ ssh bandit6@bandit.labs.overthewire.org -p 2220
@@ -107,7 +107,7 @@ $ cat /var/lib/dpkg/info/bandit7.password - nakon komande find dobijamo path do 
 
 ## Level 7
 
-###### Komande korištene za prolazak level 7:
+###### Komande korištene za prolazak levela 7:
 
 ```
 $ ssh bandit7@bandit.labs.overthewire.org -p 2220
@@ -116,7 +116,7 @@ $ grep "millionth" data.txt - pronalazimo rijec millionth pored koje se nalazi p
 
 ## Level 8
 
-###### Komande korištene za prolazak level 8:
+###### Komande korištene za prolazak levela 8:
 
 ```
 $ ssh bandit8@bandit.labs.overthewire.org -p 2220
@@ -126,7 +126,7 @@ $ sort data.txt | uniq -u - trazimo unutar data.txt liniju koja se ponavljuje je
 
 ## Level 9
 
-###### Komande korištene za prolazak level 9:
+###### Komande korištene za prolazak levela 9:
 
 ```
 $ ssh bandit9@bandit.labs.overthewire.org -p 2220
@@ -136,7 +136,7 @@ $ strings data.txt | grep "=" - ovom komandom citamo datoteku data.txt, komandom
 
 ## Level 10
 
-###### Komande korištene za prolazaklevel 10:
+###### Komande korištene za prolazak levela 10:
 
 ```
 $ ssh bandit10@bandit.labs.overthewire.org -p 2220
