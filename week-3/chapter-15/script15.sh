@@ -1,5 +1,6 @@
 #!/bin/bash
 # read file and create INSERT statements for MySQL
+
 outfile='members.sql'
 IFS=','
 while read lname fname address city state zip

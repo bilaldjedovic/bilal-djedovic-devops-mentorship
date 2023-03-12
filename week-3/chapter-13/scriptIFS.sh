@@ -1,5 +1,6 @@
 #!/bin/bash
  # changing the IFS value
+ 
  IFS.OLD=$IFS
  IFS=$'\n'
  for entry in $(cat /etc/passwd)

@@ -1,7 +1,7 @@
 #!/bin/bash
 #mutiple variables
 
-for((a=1, b=10; a<=10; a++, b--))
+for ((a=1, b=10; a<=10; a++, b--))
 do 
     echo "$a - $b"
 done

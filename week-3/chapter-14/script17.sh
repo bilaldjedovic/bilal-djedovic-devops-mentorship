@@ -1,5 +1,6 @@
 #!/bin/bash
 # extracting command line options and values
+
 echo
 while [ -n "$1" ]
 do
