@@ -29,6 +29,7 @@ Koristio sam komandu te sam konfigurisao profil uz pomoć dostavljenog excel fil
 
 ![](./Screenshot_3.png)
 
+![](./Screenshot_12.png)
 `sudo openssl s_client -servername djedovic-bilal.awsbosnia.com -connect djedovic-bilal.awsbosnia.com:443 -state`
 
 - Importovao Lets Encrypt SSL certifikat unutar AWS Certified Managera.
@@ -41,6 +42,8 @@ Koristio sam komandu te sam konfigurisao profil uz pomoć dostavljenog excel fil
   ![](./Screenshot_3.png)
 - Koristeci openssl komande prikazao sam da koristim AWS certifikat.
   ![](./Screenshot_6.png)
+
+  ![](./Screenshot_11.png)
 
 ![](./Screenshot_7.png)
 
