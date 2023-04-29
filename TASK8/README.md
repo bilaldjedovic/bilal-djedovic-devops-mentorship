@@ -27,6 +27,8 @@ Koristio sam komandu te sam konfigurisao profil uz pomoć dostavljenog excel fil
 
 - Koristeci openssl komande prikazao koji SSL certitikat koristim i datum njegovog isteka.
 
+`openssl s_client djedovic-bilal.awsbosnia.com:443 | openssl x509 -noout -dates`
+
 ![](./Screenshot_3.png)
 
 ![](./Screenshot_12.png)
