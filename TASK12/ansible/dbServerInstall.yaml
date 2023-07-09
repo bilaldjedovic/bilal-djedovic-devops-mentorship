@@ -1,0 +1,17 @@
+- name: DB servers playbook
+  hosts: DBServers
+  become: yes
+  tasks:
+    - name: Copy sh script
+      copy:
+        src: mySqlInstall.sh
+        dest: /home/ec2-user/mySqlInstall.sh
+        owner: root
+        group: root
+        mode: 0777
+    - name: Run sh script
+      shell: /home/ec2-user/mySqlInstall.sh
+    - name: Install mysql
+      dnf:
+        name: mysql-community-server
+        state: latest

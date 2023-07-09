@@ -1,0 +1,30 @@
+{
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "region": "eu-central-1",
+      "profile": "bilcho",
+      "source_ami": "ami-07ce6ac5ac8a0ee6f",
+      "instance_type": "t2.micro",
+      "ssh_username": "ec2-user",
+      "temporary_key_pair_type": "ed25519",
+      "ami_name": "devops-mentorship-task-12 {{timestamp}}",
+      "tags": {
+        "Name": "task12-web-server",
+        "CreatedBy": "bilaldjedovic",
+        "Project": "TASK-12",
+        "IaC": "Packer"
+      }
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "script": "./shell/nginxInstall.sh"
+    },
+    {
+      "type": "shell",
+      "script": "./shell/mysqlInstall.sh"
+    }
+  ]
+}
