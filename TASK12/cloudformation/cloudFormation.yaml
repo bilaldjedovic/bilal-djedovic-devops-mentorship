@@ -1,0 +1,69 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Resources:
+  WebServerInstance:
+    Type: "AWS::EC2::Instance"
+    Properties:
+      InstanceType: "t2.micro"
+      ImageId: "ami-01227d7955a42d782"
+      SecurityGroupIds:
+        - !Ref WebServerSecurityGroup
+      SubnetId: "subnet-07f09b1c0fe19bb35"
+      KeyName: bilal-djedovic-web-server-key
+      Tags:
+        - Key: Name
+          Value: task-12-web-server-cf
+        - Key: CreatedBy
+          Value: bilaldjedovic
+        - Key: Project
+          Value: task-12
+        - Key: IaC
+          Value: CloudFormation
+
+  DBServerInstance:
+    Type: "AWS::EC2::Instance"
+    Properties:
+      InstanceType: "t2.micro"
+      ImageId: "ami-01227d7955a42d782"
+      SecurityGroupIds:
+        - !Ref DBServerSecurityGroup
+      SubnetId: "subnet-0e0d76403c9ad0d1d"
+      KeyName: bilal-djedovic-web-server-key
+      Tags:
+        - Key: Name
+          Value: task-12-web-server-cf
+        - Key: CreatedBy
+          Value: bilaldjedovic
+        - Key: Project
+          Value: task-12
+        - Key: IaC
+          Value: CloudFormation
+
+  WebServerSecurityGroup:
+    Type: "AWS::EC2::SecurityGroup"
+    Properties:
+      GroupDescription: "Security group for the web server"
+      VpcId: "vpc-009361844b58c10e8"
+      SecurityGroupIngress:
+        - CidrIp: 0.0.0.0/0
+          FromPort: 22
+          IpProtocol: tcp
+          ToPort: 22
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+
+  DBServerSecurityGroup:
+    Type: "AWS::EC2::SecurityGroup"
+    Properties:
+      GroupDescription: "Security group for the database server"
+      VpcId: "vpc-009361844b58c10e8"
+      SecurityGroupIngress:
+        - CidrIp: 0.0.0.0/0
+          FromPort: 22
+          IpProtocol: tcp
+          ToPort: 22
+        - IpProtocol: tcp
+          FromPort: 3306
+          ToPort: 3306
+          CidrIp: 0.0.0.0/0

@@ -1,0 +1,10 @@
+---
+- name: Nginx content
+  hosts: WebServerCf
+  become: true
+  gather_facts: false
+  tasks:
+    - name: Create index.html file for cf
+      copy:
+        content: "Hello from Nginx web server created using CloudFormation and Ansible."
+        dest: /usr/share/nginx/html/index.html

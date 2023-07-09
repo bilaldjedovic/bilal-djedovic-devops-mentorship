@@ -1,0 +1,35 @@
+---
+- name: Verify connection to MySQL database servers
+  hosts: WebServers
+  gather_facts: false
+
+  tasks:
+    - name: Check MySQL connection via Telnet (3.122.112.221)
+      wait_for:
+        host: 3.122.112.221
+        port: 3306
+        delay: 5
+        timeout: 10
+        state: started
+        msg: "MySQL database server (3.122.112.221) is not reachable on port 3306"
+
+      register: result_1
+
+    - name: Check MySQL connection via Telnet (3.124.193.232)
+      wait_for:
+        host: 3.124.193.232
+        port: 3306
+        delay: 5
+        timeout: 10
+        state: started
+        msg: "MySQL database server (3.124.193.232) is not reachable on port 3306"
+
+      register: result_2
+
+    - name: Display connection status
+      debug:
+        var: result_1
+
+    - name: Display connection status
+      debug:
+        var: result_2
